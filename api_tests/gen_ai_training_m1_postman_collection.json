@@ -1,0 +1,167 @@
+{
+  "info": {
+    "name": "Gen AI Training Module 1 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Simple Chat Prompt",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/chat/simple?input=I%20want%20to%20find%20top-10%20books%20about%20world%20history",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "chat/simple"
+          ],
+          "query": [
+            {
+              "key": "input",
+              "value": "I want to find top-10 books about world history"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Function Message with Default Settings",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/chat/function-message?input=I%20want%20to%20find%20top-10%20books%20about%20world%20history",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "chat/function-message"
+          ],
+          "query": [
+            {
+              "key": "input",
+              "value": "I want to find top-10 books about world history"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Function Message with Changed Settings",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/chat/function-message-changed?input=I%20want%20to%20find%20top-10%20books%20about%20world%20history",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "chat/function-message-changed"
+          ],
+          "query": [
+            {
+              "key": "input",
+              "value": "I want to find top-10 books about world history"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kernel Simple Prompt",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"I want to find top-10 books about world history\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/kernel/simple",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "kernel/simple"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kernel JSON Response",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"I want to find top-10 books about world history\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/kernel/json",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "kernel/json"
+          ]
+        }
+      }
+    }
+  ]
+}
