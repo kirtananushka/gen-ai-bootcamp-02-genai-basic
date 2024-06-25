@@ -1,0 +1,50 @@
+### Get kernel response using simple prompt
+POST http://localhost:8080/kernel/simple
+Accept: application/json
+Content-Type: application/json
+
+{
+  "input": "I want to find top-3 books about history"
+}
+
+### Get kernel JSON response
+POST http://localhost:8080/kernel/json
+Accept: application/json
+Content-Type: application/json
+
+{
+  "input": "I want to find top-3 books about linguistics"
+}
+
+### Get kernel JSON response with settings
+POST http://localhost:8080/kernel/json-with-settings
+Accept: application/json
+Content-Type: application/json
+
+{
+  "input": "I want to find top-3 books about world history",
+  "max_tokens": 1000,
+  "temperature": 0.00
+}
+
+### Get kernel JSON response with changed settings
+POST http://localhost:8080/kernel/json-with-settings
+Accept: application/json
+Content-Type: application/json
+
+{
+  "input": "I want to find top-3 books about world history",
+  "max_tokens": 1000,
+  "temperature": 1.7
+}
+
+### Get kernel JSON response with history
+POST http://localhost:8080/kernel/json-with-history
+Accept: application/json
+Content-Type: application/json
+
+{
+  "input": "I want to find top-3 books about world art",
+  "max_tokens": 1000,
+  "temperature": 0.00
+}
